@@ -39,7 +39,7 @@ from youtube_qa.youtube_video_index import VideoIndexQueryResponse, YouTubeVideo
 
 question = "what are the best researched supplements to help with exercise motivation"
 video_index = YouTubeVideoIndex()
-search_term = generate_search_query(question)
+search_term = video_index.generate_search_query(question)
 
 video_index.build_index(
     search_term=search_term,
