@@ -1,10 +1,6 @@
 import os
 from llama_index.core.base.llms.types import CompletionResponse
 from llama_index.llms.openai import OpenAI
-from dotenv import load_dotenv
-
-load_dotenv()
-
 
 def get_relevant_search_query_for_question(
     question: str,
