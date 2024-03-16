@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Question answering over YouTube videos with embeddings and LLMs."
 authors = ["Jake Cyr <cyrjake@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "youtube_qa" }]
+packages = [{ include = "youtube_qa" }, { include = "youtube_qa_api" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
