@@ -1,10 +1,13 @@
 [tool.poetry]
 name = "youtube-qa"
-version = "1.0.1"
+version = "1.0.2"
 description = "Question answering over YouTube videos with embeddings and LLMs."
 authors = ["Jake Cyr <cyrjake@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "youtube_qa" }]
+repository = "https://github.com/jakecyr/youtube-qa"
+homepage = "https://github.com/jakecyr/youtube-qa"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = ">=3.9, <3.12"
