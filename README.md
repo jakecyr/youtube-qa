@@ -17,24 +17,38 @@ environment variable before using.
 ## Example
 
 ```python
-from youtube_qa.answer_question import answer_question_using_youtube
+from youtube_qa.youtube_video_index import VideoIndexQueryResponse, YouTubeVideoIndex
 
-response, sources = answer_question_using_youtube(
-    search_term="peter attia running endurance",
-    question="how to train for endurance",
+video_index = YouTubeVideoIndex()
+video_index.build_index(
+    search_term="huberman motivation",
+    video_results=3,
+)
+response: VideoIndexQueryResponse = video_index.answer_question(
+    question="what are the best researched supplements to help with exercise motivation",
 )
 
-print(response)
+print(response.answer) # The answer to the question.
+print(response.sources) # Video links and other metadata.
 ```
 
-Or to let the LLM auto-generate a relevant search query:
+You can also generate the search query given the question:
 
 ```python
-from youtube_qa.answer_question import answer_question_using_youtube
+from youtube_qa.youtube_video_index import VideoIndexQueryResponse, YouTubeVideoIndex
 
-response, sources = answer_question_using_youtube(
-    question="how to train for endurance",
+question = "what are the best researched supplements to help with exercise motivation"
+video_index = YouTubeVideoIndex()
+search_term = generate_search_query(question)
+
+video_index.build_index(
+    search_term=search_term,
+    video_results=3,
+)
+response: VideoIndexQueryResponse = video_index.answer_question(
+    question=question,
 )
 
-print(response)
+print(response.answer) # The answer to the question.
+print(response.sources) # Video links and other metadata.
 ```

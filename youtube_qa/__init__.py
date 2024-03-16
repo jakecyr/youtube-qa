@@ -1,3 +1,3 @@
-from youtube_qa.answer_question import answer_question_using_youtube
+from youtube_qa.youtube_video_index import YouTubeVideoIndex
 
-__all__: list[str] = ["answer_question_using_youtube"]
+__all__: list[str] = ["YouTubeVideoIndex"]

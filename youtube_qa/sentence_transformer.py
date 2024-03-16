@@ -27,17 +27,13 @@ class SentenceTransformerEmbedding(BaseEmbedding):
         return self._get_text_embedding(text)
 
     def _get_query_embedding(self, query: str) -> list[float]:
-        print("Getting query embedding...")
         embeddings = self._model.encode(query).tolist()
-        print(embeddings)
         return cast(list[float], embeddings)
 
     def _get_text_embedding(self, text: str) -> list[float]:
-        print("Getting text embedding...")
         embeddings = self._model.encode([text])
         return cast(list[float], embeddings.tolist())
 
     def _get_text_embeddings(self, texts: list[str]) -> list[list[float]]:
-        print("Getting text embeddings...")
         embeddings = self._model.encode(texts)
         return cast(list[list[float]], embeddings.tolist())

@@ -1,12 +1,16 @@
-from youtube_qa.answer_question import answer_question_using_youtube
+from youtube_qa.youtube_video_index import VideoIndexQueryResponse, YouTubeVideoIndex
 from dotenv import load_dotenv
 
 load_dotenv()
 
-response, sources = answer_question_using_youtube(
-    search_term="peter attia running endurance",
-    question="how to train for endurance",
+video_index = YouTubeVideoIndex()
+video_index.build_index(
+    search_term="huberman motivation",
+    video_results=3,
+)
+response: VideoIndexQueryResponse = video_index.answer_question(
+    question="what are the best researched supplements to help with exercise motivation",
 )
 
-print(response)
-print(sources)
+print(response.answer)
+print(response.sources)
