@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "youtube-qa"
-version = "0.1.1"
+version = "0.1.2"
 description = "Question answering over YouTube videos with embeddings and LLMs."
 authors = ["Jake Cyr <cyrjake@gmail.com>"]
 readme = "README.md"
