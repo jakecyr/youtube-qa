@@ -805,13 +805,13 @@ llama-index-llms-openai = ">=0.1.1,<0.2.0"
 
 [[package]]
 name = "llama-index-core"
-version = "0.10.20.post1"
+version = "0.10.20.post2"
 description = "Interface between LLMs and your data"
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "llama_index_core-0.10.20.post1-py3-none-any.whl", hash = "sha256:085229fcb4e090920745a4d4bd13c3fdd2d47325a71ea89a099adbc355bcf4ae"},
-    {file = "llama_index_core-0.10.20.post1.tar.gz", hash = "sha256:6b3e862322ba90e4714506dbe875d9f5bb8d45eedaf3f0e3642603631fa08046"},
+    {file = "llama_index_core-0.10.20.post2-py3-none-any.whl", hash = "sha256:6d05e53271250dd340ea75f0395d9529eea6788546c1fe9020dc7597fa47907b"},
+    {file = "llama_index_core-0.10.20.post2.tar.gz", hash = "sha256:d7d83a2f89269a3abc64663ef122ab6b132d6fbc1d32b5f0ba2909c4e8c6c55a"},
 ]
 
 [package.dependencies]
@@ -1570,7 +1570,6 @@ files = [
 numpy = [
     {version = ">=1.22.4,<2", markers = "python_version < \"3.11\""},
     {version = ">=1.23.2,<2", markers = "python_version == \"3.11\""},
-    {version = ">=1.26.0,<2", markers = "python_version >= \"3.12\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -1864,6 +1863,9 @@ files = [
     {file = "pypdf-4.1.0-py3-none-any.whl", hash = "sha256:16cac912a05200099cef3f347c4c7e0aaf0a6d027603b8f9a973c0ea500dff89"},
     {file = "pypdf-4.1.0.tar.gz", hash = "sha256:01c3257ec908676efd60a4537e525b89d48e0852bc92b4e0aa4cc646feda17cc"},
 ]
+
+[package.dependencies]
+typing_extensions = {version = ">=3.7.4.3", markers = "python_version < \"3.10\""}
 
 [package.extras]
 crypto = ["PyCryptodome", "cryptography"]
@@ -3104,5 +3106,5 @@ requests = "*"
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "45d54269702dc285d673d0d2b0b5039a630db1ac056ca4ff343582972c941d18"
+python-versions = ">=3.9, <3.12"
+content-hash = "18f01f82bad1011a7460e68f41e63f88d85b0ecccf03c5d196828eb857b97453"

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from youtube_transcript_api import YouTubeTranscriptApi
 from llama_index.core import Document
 from llama_index.core.schema import NodeWithScore

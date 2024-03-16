@@ -1,5 +1,5 @@
+from __future__ import annotations
 from typing import Any, cast
-
 from llama_index.core.embeddings import BaseEmbedding
 from sentence_transformers import SentenceTransformer
 from llama_index.core.bridge.pydantic import PrivateAttr

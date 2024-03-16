@@ -1,3 +1,4 @@
+from __future__ import annotations
 from youtube_search import YoutubeSearch
 from llama_index.core import Document, Settings, VectorStoreIndex
 from youtube_qa.converters import (
