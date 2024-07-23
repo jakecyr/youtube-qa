@@ -38,7 +38,9 @@ You can also generate the search query given the question:
 from youtube_qa.youtube_video_index import VideoIndexQueryResponse, YouTubeVideoIndex
 
 question = "what are the best researched supplements to help with exercise motivation"
-video_index = YouTubeVideoIndex()
+video_index = YouTubeVideoIndex(
+    # Can optionally pass in custom embedding model and LLM here.
+)
 search_term = video_index.generate_search_query(question)
 
 video_index.build_index(

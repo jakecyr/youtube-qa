@@ -10,7 +10,7 @@ homepage = "https://github.com/jakecyr/youtube-qa"
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.9, <3.12"
+python = ">=3.9, <3.13"
 sentence-transformers = "^2.5.1"
 youtube-search = "^2.1.2"
 youtube-transcript-api = "^0.6.2"
