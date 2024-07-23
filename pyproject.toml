@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "youtube-qa"
-version = "1.0.3"
+version = "1.0.4"
 description = "Question answering over YouTube videos with embeddings and LLMs."
 authors = ["Jake Cyr <cyrjake@gmail.com>"]
 readme = "README.md"
@@ -14,7 +14,7 @@ python = ">=3.9, <3.13"
 sentence-transformers = "^2.5.1"
 youtube-search = "^2.1.2"
 youtube-transcript-api = "^0.6.2"
-llama-index = "^0.10.20"
+llama-index = "^0.10.56"
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"
