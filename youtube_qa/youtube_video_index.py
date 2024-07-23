@@ -37,6 +37,7 @@ class YouTubeVideoIndex:
             if embed_model
             else SentenceTransformerEmbedding(model_name=embedding_model_name)
         )
+        Settings.embed_model = self._embedding_model
 
     def build_index(
         self,
@@ -64,8 +65,6 @@ class YouTubeVideoIndex:
             transcripts.append(transcript_to_video_info(result))
 
         documents: list[Document] = transcripts_to_documents(transcripts)
-        embed_model = SentenceTransformerEmbedding()
-        Settings.embed_model = embed_model
         Settings.chunk_size = chunk_size
         self._index = VectorStoreIndex.from_documents(
             documents, show_progress=show_progress
